@@ -1077,7 +1077,7 @@ document.querySelectorAll('.btn, .prix-cta').forEach(el => {
 (function() {
   const key = 'cd_end';
   let end = localStorage.getItem(key);
-  if (!end) { end = Date.now() + 48*3600*1000; try { localStorage.setItem(key, end); } catch(e){} }
+  if (!end) { end = Date.now() + 72*3600*1000; try { localStorage.setItem(key, end); } catch(e){} }
   function tick() {
     const diff = Math.max(0, end - Date.now());
     const h = Math.floor(diff/3600000);
