@@ -482,6 +482,67 @@ wistia-player[media-id='6busq98726']:not(:defined) {
   .offre-grid{grid-template-columns:1fr}
   .prix-card{padding:32px 26px}
 }
+/* ══════════════════════════════════════
+   SECTIONS CLAIRES — alternance clair/sombre
+══════════════════════════════════════ */
+section.light{
+  --ink: #F6F3EE;
+  --muted: #6B655F;
+  --surface: rgba(10,10,10,.035);
+  --surface2: rgba(10,10,10,.05);
+  --border: rgba(10,10,10,.1);
+  --border-light: rgba(10,10,10,.18);
+  background:var(--ink);
+  color:#3C3833;
+}
+section.light::before{display:none} /* neutralise les halos radiaux rouges sombres */
+section.light h1,section.light h2,section.light h3,section.light h4{color:#161311}
+section.light .section-title em,section.light .hero-title em{color:var(--accent)}
+section.light .section-eyebrow{color:var(--accent)}
+section.light p{color:#5c564f}
+section.light strong{color:#211e1a}
+
+/* Problème */
+section.light .pain-card{background:#fff;border-color:rgba(10,10,10,.08);box-shadow:0 4px 18px rgba(10,10,10,.05)}
+section.light .pain-card:hover{background:#fff;border-color:var(--border-red);box-shadow:0 10px 30px rgba(214,40,40,.12)}
+section.light .pain-card h3{color:#161311}
+section.light .pain-card p{color:#6B655F}
+section.light .pain-conclusion{background:#fff}
+section.light .pain-conclusion p{color:#4a4540}
+section.light .pain-conclusion strong{color:var(--accent)}
+
+/* Formateur */
+section.light .formateur-photo{background:#fff;border-color:rgba(10,10,10,.08)}
+section.light .formateur-name{color:#161311}
+section.light .formateur-role{color:var(--accent)}
+section.light .formateur-bio{color:#5c564f}
+section.light .formateur-bio strong{color:#211e1a}
+section.light .formateur-tag{background:#fff;color:var(--accent)}
+section.light .formateur-link{color:var(--accent)}
+
+/* Transformation */
+section.light .transfo-col.before{background:#fff;border-color:rgba(10,10,10,.08)}
+section.light .transfo-col.before h3{color:#8a847c}
+section.light .transfo-col.before .transfo-item{color:#6B655F}
+section.light .transfo-col.before .transfo-item i{color:#B5AFA6}
+section.light .transfo-arrow{color:var(--accent)}
+
+/* Témoignages */
+section.light .testimony-card{background:rgba(10,10,10,.04)}
+
+/* Garantie */
+section.light .garantie-icon{background:#fff}
+section.light .garantie-wrap h2{color:#161311}
+section.light .garantie-wrap p{color:#5c564f}
+section.light .garantie-days{color:var(--accent)}
+section.light .garantie-label{color:#6B655F}
+
+/* Urgence */
+section.light .countdown-block{background:#fff;border-color:var(--border-red)}
+section.light .countdown-num{color:#161311}
+section.light .countdown-label{color:#8a847c}
+section.light .section-sub{color:#5c564f}
+
 @media(max-width:600px){
   #hero{padding:28px 0 44px}
   section{padding:48px 0}
@@ -567,7 +628,7 @@ wistia-player[media-id='6busq98726']:not(:defined) {
 </section>
 
 <!-- PROBLÈME -->
-<section id="probleme">
+<section id="probleme" class="light">
   <div class="container">
     <div class="section-eyebrow center"><svg class="icon" viewBox="0 0 24 24"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.871l-8.106 -13.534a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>Le problème</div>
     <h2 class="section-title" style="text-align:center">Et si tu te reconnais <em>là-dedans…</em></h2>
@@ -614,7 +675,7 @@ wistia-player[media-id='6busq98726']:not(:defined) {
 </section>
 
 <!-- FORMATEUR -->
-<section id="formateur">
+<section id="formateur" class="light">
   <div class="container">
     <div class="formateur-grid">
       <div class="section-eyebrow formateur-eyebrow"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/></svg>Le formateur</div>
@@ -660,7 +721,7 @@ wistia-player[media-id='6busq98726']:not(:defined) {
 </section>
 
 <!-- TRANSFORMATION -->
-<section id="transformation">
+<section id="transformation" class="light">
   <div class="container">
     <div class="text-center" style="margin-bottom:0">
       <div class="section-eyebrow center"><svg class="icon" viewBox="0 0 24 24"><path d="M7 10h14l-3 -3"/><path d="M21 10l-3 3"/><path d="M17 14h-14l3 3"/><path d="M3 14l3 -3"/></svg>La transformation</div>
@@ -876,7 +937,7 @@ wistia-player[media-id='6busq98726']:not(:defined) {
 </section>
 
 <!-- TÉMOIGNAGES -->
-<section id="temoignages">
+<section id="temoignages" class="light">
   <div class="container">
     <div class="text-center" style="margin-bottom:0">
       <div class="section-eyebrow center"><svg class="icon" viewBox="0 0 24 24"><path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.5 -1.5 4.5 -4 5"/><path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.5 -1.5 4.5 -4 5"/></svg>Ils ont appliqué la méthode</div>
@@ -956,7 +1017,7 @@ wistia-player[media-id='6busq98726']:not(:defined) {
 </section>
 
 <!-- GARANTIE -->
-<section id="garantie">
+<section id="garantie" class="light">
   <div class="container">
     <div class="garantie-wrap">
       <div class="garantie-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M9 12l2 2l4 -4"/></svg></div>
@@ -991,7 +1052,7 @@ wistia-player[media-id='6busq98726']:not(:defined) {
 </section>
 
 <!-- URGENCE -->
-<section id="urgence">
+<section id="urgence" class="light">
   <div class="container">
     <div class="urgence-wrap">
       <div class="section-eyebrow center"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5l3 3"/></svg>Offre limitée</div>
